@@ -1,6 +1,14 @@
 <template>
-    <div>
-    Hello 
-    </div>
+  <div>
+    {{counter}}
+  </div>
 </template>
 
+<script>
+  import {mapState} from 'vuex'
+  computed:{
+      ...mapState({
+          counter:state => state.counter
+      })
+  }
+</script>
