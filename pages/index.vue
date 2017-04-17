@@ -1,14 +1,18 @@
 <template>
-  <div>
-    {{counter}}
-  </div>
+    <div>
+        {{counter}}
+    </div>
 </template>
 
 <script>
-  import {mapState} from 'vuex'
-  computed:{
-      ...mapState({
-          counter:state => state.counter
-      })
-  }
+    import {
+        mapState
+    } from 'vuex'
+    export default {
+      computed: {
+        ...mapState({
+          counter: state => state.counter
+        })
+      }
+    }
 </script>
